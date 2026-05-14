@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+ 
+  my-oracle-db:
+    image: gvenzl/oracle-xe
+    container_name: oracle_server
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_PASSWORD=Zeliha123
+    volumes:
+      - ./data_folder:/opt/oracle/oradata 
